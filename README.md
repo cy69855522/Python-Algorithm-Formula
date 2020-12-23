@@ -19,6 +19,16 @@
   4. 理清当前节点是如何利用之前节点快速求解的
 - 例子
   - [152. 乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/)
+    ```python
+    class Solution:
+      def maxProduct(self, nums: List[int]) -> int:
+          dp_min, dp_max = nums.copy(), nums.copy()
+          for i in range(1, len(nums)):
+              cho = (n:=nums[i], n*dp_min[i-1], n*dp_max[i-1])
+              dp_min[i], dp_max[i] = min(cho), max(cho)
+
+          return max(dp_max)
+    ```
 ## 广度优先搜索 BFS
 
 ## 深度优先搜索 DFS
