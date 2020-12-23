@@ -22,7 +22,7 @@
     ```python
     class Solution:
       def maxProduct(self, nums: List[int]) -> int:
-          # ① nums可以视为时间序列，以nums[-1]结尾的乘积最大子数组 = max(nums[-1]，nums[-1]*以nums[-2]结尾的最大值或最小值)
+          # ① nums可以视为时间序列，以nums[-1]结尾的乘积最大子数组 = max(nums[-1]，nums[-1] * 以nums[-2]结尾的最大值或最小值)
           dp_min, dp_max = nums.copy(), nums.copy() # ②、③
           for i in range(1, len(nums)):
               cho = (n:=nums[i], n*dp_min[i-1], n*dp_max[i-1])
