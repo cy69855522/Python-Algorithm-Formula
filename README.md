@@ -17,6 +17,8 @@
   2. 创建一个与时间序列等长的list用于保存每个时间节点
   3. 初始化时间序列的开头
   4. 理清当前节点是如何利用之前节点快速求解的
+- 例子
+  - [152. 乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/)
 ## 广度优先搜索 BFS
 
 ## 深度优先搜索 DFS
