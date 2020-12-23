@@ -14,7 +14,7 @@
   - 算法对时间复杂度要求较为严格（因为DP可以节省时间）
 - How？
   1. 将问题转化为时间序列
-  2. 创建一个与时间序列等长的list用于保存每个时间节点
+  2. 创建与时间序列等长的list用于保存每个时间节点
   3. 初始化时间序列的开头
   4. 理清当前节点是如何利用之前节点快速求解的
 - 例子
@@ -22,11 +22,11 @@
     ```python
     class Solution:
       def maxProduct(self, nums: List[int]) -> int:
-          dp_min, dp_max = nums.copy(), nums.copy()
+          # ① nums可以视为时间序列，以nums[-1]结尾的乘积最大子数组 = max(nums[-1]，nums[-1]*以nums[-2]结尾的最大值或最小值)
+          dp_min, dp_max = nums.copy(), nums.copy() # ②、③
           for i in range(1, len(nums)):
               cho = (n:=nums[i], n*dp_min[i-1], n*dp_max[i-1])
-              dp_min[i], dp_max[i] = min(cho), max(cho)
-
+              dp_min[i], dp_max[i] = min(cho), max(cho) # ④
           return max(dp_max)
     ```
 ## 广度优先搜索 BFS
