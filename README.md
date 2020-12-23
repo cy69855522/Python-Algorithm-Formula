@@ -28,7 +28,7 @@
             dp_min[i], dp_max[i] = min(cho), max(cho) # ④
         return max(dp_max)
   ```
-  1. nums可以被视为时间序列，nums对应的结果可以基于nums[-1]的结果快速求解
+  1. nums可以被视为时间序列，nums对应的结果可以基于nums[:-1]的结果快速求解
   2. 创建了两个list分别用于保存：以对应位置元素为连续子数组末端时的乘积最大值、最小值，list长度同nums
   3. 当nums只有一个数字时，最大乘积就是那个数字。所以需要保证`dp_min[0]、dp_max[0] = nums[0]`
   4. 以nums[-1]结尾的乘积最大子数组 = max(nums[-1]，nums[-1] * 以nums[-2]结尾的乘积最大值或最小值)
