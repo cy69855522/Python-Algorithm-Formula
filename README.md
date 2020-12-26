@@ -56,6 +56,8 @@
 - 实际同对队列的应用
 
 ## 排序
+- 比较数组中的一对数字：MergeSort
+  - [剑指 Offer 51. 数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
 
 ## 递归
 
