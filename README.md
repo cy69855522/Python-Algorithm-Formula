@@ -11,6 +11,11 @@
 
 # 技巧
 - `@lru_cache(None)`缓存装饰器可直接利用缓存的相同输入时函数的结果
+- BFS、DFS题都可以使用`collections.deque`模块
+  - `q = collections.deque([root])`
+  - `while q`
+  - `q.popleft()`
+  - `q.popright()`
 
 # 公式
 ## 动态规划 DP
