@@ -63,6 +63,7 @@
   - [剑指 Offer 51. 数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
 
 ## 递归
+- 只需要考虑最后两个值的情况
 
 ## 二叉树
 - 树形问题一般使用递归解决
